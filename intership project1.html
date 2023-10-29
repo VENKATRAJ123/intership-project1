@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h1{
+        text-align: center;
+        font-size: 50px;
+        margin: 20px 0;
+        color: #B23CFD;
+    }
+    .container{
+        position: relative;
+        background-color: #fffffe;
+        
+    }
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .gallery img{
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        padding: 5px;
+        transition: all 4;
+    }
+    .gallery img:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 10px lightgray;
+        transform: scale(1.03);
+    }
+    .popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        display: none;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 20;
+
+    }
+    .popup span{
+        position: absolute;
+        top: 0;
+        right: 10px;
+        cursor: pointer;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 20;
+
+        
+    }
+    .popup img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: 750PX;
+        object-fit: cover;
+
+    }
+    @media (max-width:768px){
+        .popup img{
+            width: 95%;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Image Gallery</h1>
+        <div class="gallery">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat3.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat1.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\VENKAT.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat2.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat4.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat5.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat6.png.jpg" alt="">
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\venkat7.png.jpg" alt="">
+        </div>
+    
+        <div class="popup">
+            <span>8times;</span>
+            <img src="C:\Users\VENKATRAJ\Downloads\VENKAT PIC\VENKAT.png.jpg" alt="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
